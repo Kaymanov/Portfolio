@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Сайт Портфолио</title>
     <link rel="stylesheet" href="static/style/style.css">
+    <link rel="stylesheet" href="static/style/hover.css">
     <style>
         #page-preloader {
             position: fixed;
@@ -157,14 +158,15 @@
 </head>
 <body>
     <div id= "page-preloader"><span class="cssload-loader"></span></div>
-    <h2>Мой сайт портфолио</h2>
-    <script>
-        $(window).on('load', function () {
-            var $preloader = $('#page-preloader'),
-                $spinner   = $preloader.find('.cssload-loader');
-            $spinner.fadeOut();
-            $preloader.delay(350).fadeOut('slow');
-        });
-    </script>
+    <div class="grid">
+        <div class="grid-nav">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Работа</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Обо мне</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
