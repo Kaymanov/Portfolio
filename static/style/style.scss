@@ -1,8 +1,21 @@
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url("../img/Background_body.png")no-repeat;
+  background-size: 100%;
+
+  .grid {
+    display: grid;
+    grid-template-areas: "a a a a a a a a a a a a"
+                         "b b b b b b b b b b b b";
+  }
 
 
-  .grid .grid-nav {
+  .grid-nav {
+    grid-area: a;
     padding: 20px;
+    opacity: 0.6;
+    font-style: inherit;
     ul {
       text-align: center;
       li {
@@ -10,7 +23,8 @@ body {
         display: inline-block;
         margin-left: 15px;
         a {
-          background-color: darkgray;
+          color: #000;
+          background-color: #aaaaaa;
           padding: 15px;
           text-decoration: none;
           display: inline-block;
@@ -29,6 +43,31 @@ body {
         }
       }
     }
+  }
+  .grid-hello{
+    grid-area: b;
+    color: white;
+    h3 {
+
+    }
+      .photo {
+        width: 150px;
+        height: 250px;
+        float: left;
+
+        img {
+          border-radius: 90px;
+          width: 150px;
+          height: 250px;
+          opacity: 0.6;
+          &:hover,
+          &:focus {
+          opacity: 1;
+            -webkit-transition: opacity 2s;
+            transition: opacity 2s;
+          }
+        }
+      }
   }
 }
 

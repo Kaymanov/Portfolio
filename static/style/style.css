@@ -1,24 +1,52 @@
-body .grid .grid-nav {
-  padding: 20px; }
-  body .grid .grid-nav ul {
-    text-align: center; }
-    body .grid .grid-nav ul li {
-      list-style-type: none;
-      display: inline-block;
-      margin-left: 15px; }
-      body .grid .grid-nav ul li a {
-        background-color: darkgray;
-        padding: 15px;
-        text-decoration: none;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url("../img/Background_body.png") no-repeat;
+  background-size: 100%; }
+  body .grid {
+    display: grid;
+    grid-template-areas: "a a a a a a a a a a a a" "b b b b b b b b b b b b"; }
+  body .grid-nav {
+    grid-area: a;
+    padding: 20px;
+    opacity: 0.6;
+    font-style: inherit; }
+    body .grid-nav ul {
+      text-align: center; }
+      body .grid-nav ul li {
+        list-style-type: none;
         display: inline-block;
-        vertical-align: middle;
-        transform: translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        backface-visibility: hidden;
-        -moz-osx-font-smoothing: grayscale;
-        transition-duration: 0.3s;
-        transition-property: transform; }
-        body .grid .grid-nav ul li a:hover, body .grid .grid-nav ul li a:focus, body .grid .grid-nav ul li a:active {
-          transform: scale(1.1); }
+        margin-left: 15px; }
+        body .grid-nav ul li a {
+          color: #000;
+          background-color: #aaaaaa;
+          padding: 15px;
+          text-decoration: none;
+          display: inline-block;
+          vertical-align: middle;
+          transform: translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          backface-visibility: hidden;
+          -moz-osx-font-smoothing: grayscale;
+          transition-duration: 0.3s;
+          transition-property: transform; }
+          body .grid-nav ul li a:hover, body .grid-nav ul li a:focus, body .grid-nav ul li a:active {
+            transform: scale(1.1); }
+  body .grid-hello {
+    grid-area: b;
+    color: white; }
+    body .grid-hello .photo {
+      width: 150px;
+      height: 250px;
+      float: left; }
+      body .grid-hello .photo img {
+        border-radius: 90px;
+        width: 150px;
+        height: 250px;
+        opacity: 0.6; }
+        body .grid-hello .photo img:hover, body .grid-hello .photo img:focus {
+          opacity: 1;
+          -webkit-transition: opacity 2s;
+          transition: opacity 2s; }
 
 /*# sourceMappingURL=style.css.map */
