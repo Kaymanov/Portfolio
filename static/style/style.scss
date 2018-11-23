@@ -7,7 +7,7 @@ body {
   .grid {
     display: grid;
     grid-template-areas: "a a a a a a a a a a a a"
-                         "b b b b b b b b b b b b";
+                         "b b b b b c c c c c c c";
   }
 
 
@@ -47,9 +47,6 @@ body {
   .grid-hello{
     grid-area: b;
     color: white;
-    h3 {
-
-    }
       .photo {
         width: 150px;
         height: 250px;
@@ -68,6 +65,22 @@ body {
           }
         }
       }
+  }
+  .grid-hello-text {
+    grid-area: c;
+    color: floralwhite;
+    h2 {
+      font-weight: 200;
+      span {
+        font-weight: 400;
+      }
+    }
+    h3 {
+      font-weight: 100;
+      span {
+        font-weight: 500;
+      }
+    }
   }
 }
 
