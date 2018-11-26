@@ -7,7 +7,8 @@ body {
   .grid {
     display: grid;
     grid-template-areas: "a a a a a a a a a a a a"
-                         "b b b b b c c c c c c c";
+                         "b b b b b b b b b b b b"
+                         "c c c c c c c c c c c c";
   }
 
 
@@ -23,7 +24,7 @@ body {
         display: inline-block;
         margin-left: 15px;
         a {
-          color: #000;
+          color: floralwhite;
           background-color: #aaaaaa;
           padding: 15px;
           text-decoration: none;
@@ -45,17 +46,17 @@ body {
     }
   }
   .grid-hello{
+    justify-self: center;
     grid-area: b;
     color: white;
       .photo {
-        width: 150px;
-        height: 250px;
+
         float: left;
 
         img {
-          border-radius: 90px;
-          width: 150px;
-          height: 250px;
+          border-radius: 125px;
+          width: 180px;
+          height: 180px;
           opacity: 0.6;
           &:hover,
           &:focus {
@@ -67,6 +68,9 @@ body {
       }
   }
   .grid-hello-text {
+    justify-self: center;
+    text-align: center;
+    width: 750px;
     grid-area: c;
     color: floralwhite;
     h2 {

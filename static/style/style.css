@@ -5,7 +5,7 @@ body {
   background-size: 100%; }
   body .grid {
     display: grid;
-    grid-template-areas: "a a a a a a a a a a a a" "b b b b b c c c c c c c"; }
+    grid-template-areas: "a a a a a a a a a a a a" "b b b b b b b b b b b b" "c c c c c c c c c c c c"; }
   body .grid-nav {
     grid-area: a;
     padding: 20px;
@@ -18,7 +18,7 @@ body {
         display: inline-block;
         margin-left: 15px; }
         body .grid-nav ul li a {
-          color: #000;
+          color: floralwhite;
           background-color: #aaaaaa;
           padding: 15px;
           text-decoration: none;
@@ -33,22 +33,24 @@ body {
           body .grid-nav ul li a:hover, body .grid-nav ul li a:focus, body .grid-nav ul li a:active {
             transform: scale(1.1); }
   body .grid-hello {
+    justify-self: center;
     grid-area: b;
     color: white; }
     body .grid-hello .photo {
-      width: 150px;
-      height: 250px;
       float: left; }
       body .grid-hello .photo img {
-        border-radius: 90px;
-        width: 150px;
-        height: 250px;
+        border-radius: 125px;
+        width: 180px;
+        height: 180px;
         opacity: 0.6; }
         body .grid-hello .photo img:hover, body .grid-hello .photo img:focus {
           opacity: 1;
           -webkit-transition: opacity 2s;
           transition: opacity 2s; }
   body .grid-hello-text {
+    justify-self: center;
+    text-align: center;
+    width: 750px;
     grid-area: c;
     color: floralwhite; }
     body .grid-hello-text h2 {
