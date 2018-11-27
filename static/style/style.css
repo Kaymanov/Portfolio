@@ -1,65 +1,100 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: rgba(0, 0, 0, 0.5);
-  background: url("../img/Background_body.png") no-repeat;
-  background-size: 100%; }
+  padding: 0;
+  margin: 0; }
   body .grid {
     display: grid;
-    grid-template-areas: "a a a a a a a a a a a a" "b b b b b b b b b b b b" "c c c c c c c c c c c c"; }
-  body .grid-nav {
-    grid-area: a;
-    padding: 20px;
-    opacity: 0.6;
-    font-style: inherit; }
-    body .grid-nav ul {
-      text-align: center; }
-      body .grid-nav ul li {
-        list-style-type: none;
+    grid-template-areas: "a a a a a a a a a a a a"; }
+    body .grid .grid-header {
+      grid-area: a;
+      background: url("../img/Background_body.jpg") no-repeat;
+      background-size: 100%;
+      align-items: center;
+      font-size: 18px;
+      height: 100vh;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 100px;
+      position: relative;
+      text-align: center;
+      transform-style: preserve-3d;
+      /* Animations */ }
+      body .grid .grid-header .grid-nav {
+        padding: 20px;
+        opacity: 0.7;
+        font-style: inherit; }
+        body .grid .grid-header .grid-nav ul {
+          text-align: center; }
+          body .grid .grid-header .grid-nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 15px; }
+            body .grid .grid-header .grid-nav ul li a {
+              color: black;
+              background-color: #aaaaaa;
+              padding: 15px;
+              text-decoration: none;
+              display: inline-block;
+              vertical-align: middle;
+              transform: translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              backface-visibility: hidden;
+              -moz-osx-font-smoothing: grayscale;
+              transition-duration: 0.3s;
+              transition-property: transform; }
+              body .grid .grid-header .grid-nav ul li a:hover, body .grid .grid-header .grid-nav ul li a:focus, body .grid .grid-header .grid-nav ul li a:active {
+                transform: scale(1.1); }
+      body .grid .grid-header .grid-hello {
+        color: white; }
+        body .grid .grid-header .grid-hello .photo img {
+          border-radius: 125px;
+          width: 180px;
+          height: 180px;
+          opacity: 0.6; }
+          body .grid .grid-header .grid-hello .photo img:hover, body .grid .grid-header .grid-hello .photo img:focus {
+            opacity: 1;
+            -webkit-transition: opacity 2s;
+            transition: opacity 2s; }
+      body .grid .grid-header .grid-hello-text {
         display: inline-block;
-        margin-left: 15px; }
-        body .grid-nav ul li a {
-          color: floralwhite;
-          background-color: #aaaaaa;
-          padding: 15px;
-          text-decoration: none;
-          display: inline-block;
-          vertical-align: middle;
-          transform: translateZ(0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          backface-visibility: hidden;
-          -moz-osx-font-smoothing: grayscale;
-          transition-duration: 0.3s;
-          transition-property: transform; }
-          body .grid-nav ul li a:hover, body .grid-nav ul li a:focus, body .grid-nav ul li a:active {
-            transform: scale(1.1); }
-  body .grid-hello {
-    justify-self: center;
-    grid-area: b;
-    color: white; }
-    body .grid-hello .photo {
-      float: left; }
-      body .grid-hello .photo img {
-        border-radius: 125px;
-        width: 180px;
-        height: 180px;
-        opacity: 0.6; }
-        body .grid-hello .photo img:hover, body .grid-hello .photo img:focus {
-          opacity: 1;
-          -webkit-transition: opacity 2s;
-          transition: opacity 2s; }
-  body .grid-hello-text {
-    justify-self: center;
-    text-align: center;
-    width: 750px;
-    grid-area: c;
-    color: floralwhite; }
-    body .grid-hello-text h2 {
-      font-weight: 200; }
-      body .grid-hello-text h2 span {
-        font-weight: 400; }
-    body .grid-hello-text h3 {
-      font-weight: 100; }
-      body .grid-hello-text h3 span {
-        font-weight: 500; }
+        width: 700px;
+        text-align: center;
+        color: floralwhite; }
+        body .grid .grid-header .grid-hello-text h2 {
+          font-weight: 100; }
+          body .grid .grid-header .grid-hello-text h2 span {
+            font-weight: 400; }
+        body .grid .grid-header .grid-hello-text h3 {
+          font-weight: 100; }
+          body .grid .grid-header .grid-hello-text h3 span {
+            font-weight: 500; }
+      body .grid .grid-header:after {
+        background: #F9FCFF;
+        content: "";
+        height: 40rem;
+        left: -5%;
+        position: absolute;
+        right: -5%;
+        top: 90%;
+        transform-origin: 0 0;
+        transform: rotateZ(-4deg); }
+      body .grid .grid-header:before {
+        animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../img/Background_body.jpg") no-repeat bottom;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1; }
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem); }
+  100% {
+    opacity: 1;
+    transform: none; } }
 
 /*# sourceMappingURL=style.css.map */
