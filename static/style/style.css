@@ -4,7 +4,7 @@ body {
   margin: 0; }
   body .grid {
     display: grid;
-    grid-template-areas: "a a a a a a a a a a a a"; }
+    grid-template-areas: "a a a a a a a a a a a a" "b b b b b b b b b b b b"; }
     body .grid .grid-header {
       grid-area: a;
       background: url("../img/Background_body.jpg") no-repeat;
@@ -19,57 +19,8 @@ body {
       text-align: center;
       transform-style: preserve-3d;
       /* Animations */ }
-      body .grid .grid-header .grid-nav {
-        padding: 20px;
-        opacity: 0.7;
-        font-style: inherit; }
-        body .grid .grid-header .grid-nav ul {
-          text-align: center; }
-          body .grid .grid-header .grid-nav ul li {
-            list-style-type: none;
-            display: inline-block;
-            margin-left: 15px; }
-            body .grid .grid-header .grid-nav ul li a {
-              color: black;
-              background-color: #aaaaaa;
-              padding: 15px;
-              text-decoration: none;
-              display: inline-block;
-              vertical-align: middle;
-              transform: translateZ(0);
-              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-              backface-visibility: hidden;
-              -moz-osx-font-smoothing: grayscale;
-              transition-duration: 0.3s;
-              transition-property: transform; }
-              body .grid .grid-header .grid-nav ul li a:hover, body .grid .grid-header .grid-nav ul li a:focus, body .grid .grid-header .grid-nav ul li a:active {
-                transform: scale(1.1); }
-      body .grid .grid-header .grid-hello {
-        color: white; }
-        body .grid .grid-header .grid-hello .photo img {
-          border-radius: 125px;
-          width: 180px;
-          height: 180px;
-          opacity: 0.6; }
-          body .grid .grid-header .grid-hello .photo img:hover, body .grid .grid-header .grid-hello .photo img:focus {
-            opacity: 1;
-            -webkit-transition: opacity 2s;
-            transition: opacity 2s; }
-      body .grid .grid-header .grid-hello-text {
-        display: inline-block;
-        width: 700px;
-        text-align: center;
-        color: floralwhite; }
-        body .grid .grid-header .grid-hello-text h2 {
-          font-weight: 100; }
-          body .grid .grid-header .grid-hello-text h2 span {
-            font-weight: 400; }
-        body .grid .grid-header .grid-hello-text h3 {
-          font-weight: 100; }
-          body .grid .grid-header .grid-hello-text h3 span {
-            font-weight: 500; }
       body .grid .grid-header:after {
-        background: #F9FCFF;
+        background: rgba(6, 6, 6, 0.49);
         content: "";
         height: 40rem;
         left: -5%;
@@ -89,6 +40,111 @@ body {
         bottom: 0;
         left: 0;
         z-index: -1; }
+      body .grid .grid-header .grid-nav {
+        padding: 20px;
+        opacity: 0.9;
+        font-style: inherit; }
+        body .grid .grid-header .grid-nav ul {
+          text-align: center; }
+          body .grid .grid-header .grid-nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 15px;
+            /**a {
+              color: black;
+              background-color: #aaaaaa;
+              padding: 15px;
+              text-decoration: none;
+              display: inline-block;
+              vertical-align: middle;
+              transform: translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              backface-visibility: hidden;
+              -moz-osx-font-smoothing: grayscale;
+              transition-duration: 0.3s;
+              transition-property: transform;
+              &:hover,
+              &:focus,
+              &:active {
+                transform: scale(1.1);
+              }
+            }**/ }
+            body .grid .grid-header .grid-nav ul li a {
+              text-decoration: none;
+              color: floralwhite; }
+      body .grid .grid-header .grid-hello {
+        color: white;
+        text-align: center; }
+        body .grid .grid-header .grid-hello .photo img {
+          border-radius: 125px;
+          width: 180px;
+          height: 180px;
+          opacity: 0.6; }
+          body .grid .grid-header .grid-hello .photo img:hover, body .grid .grid-header .grid-hello .photo img:focus {
+            opacity: 1;
+            -webkit-transition: opacity 2s;
+            transition: opacity 2s; }
+      body .grid .grid-header .grid-hello-text {
+        display: inline-block;
+        color: floralwhite;
+        text-align: center;
+        /**padding-right: 200px;
+        padding-left: 200px;*/ }
+        body .grid .grid-header .grid-hello-text h2 {
+          font-weight: 100; }
+          body .grid .grid-header .grid-hello-text h2 span {
+            font-weight: 400; }
+        body .grid .grid-header .grid-hello-text h3 {
+          font-weight: 100; }
+          body .grid .grid-header .grid-hello-text h3 span {
+            font-weight: 500; }
+      body .grid .grid-header .button1 {
+        text-align: center; }
+        body .grid .grid-header .button1 .button {
+          perspective: 1000px;
+          display: inline-block;
+          width: 10em;
+          margin-right: 10em;
+          margin-top: 1em;
+          /**perspective: 1000px;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -10em;
+          margin-top: 8em;**/ }
+          body .grid .grid-header .button1 .button .cube {
+            color: #ccc;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            transition: all 0.85s cubic-bezier(0.17, 0.67, 0.14, 0.93);
+            transform-style: preserve-3d;
+            transform-origin: 100% 50%;
+            width: 10em;
+            height: 4em; }
+            body .grid .grid-header .button1 .button .cube:hover {
+              transform: rotateX(-90deg); }
+          body .grid .grid-header .button1 .button .side {
+            box-sizing: border-box;
+            position: absolute;
+            display: inline-block;
+            height: 4em;
+            width: 10em;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 1.5em; }
+          body .grid .grid-header .button1 .button .top {
+            background: #fff;
+            color: #222229;
+            transform: rotateX(90deg) translate3d(0, 0, 2em); }
+            body .grid .grid-header .button1 .button .top a {
+              text-decoration: none;
+              color: #222229; }
+          body .grid .grid-header .button1 .button .front {
+            background: #222229;
+            color: #fff;
+            box-shadow: inset 0 0 0 5px #fff;
+            transform: translate3d(0, 0, 2em); }
 @keyframes fade-slide-down {
   0% {
     opacity: 0;
