@@ -58,7 +58,7 @@ body {
     font-style: inherit;
     display: inline-block; }
     .grid .nav ul li {
-      background-color: grey;
+      background-color: #46627f;
       padding: 7px;
       margin: 3px;
       opacity: 0.8;
@@ -161,4 +161,4 @@ body {
     grid-template-rows: 150px auto auto auto 60px;
     grid-template-areas: '. nav nav nav hover' 'grid-hello grid-hello grid-hello grid-hello grid-hello' 'article article article article article' 'but but but but but' 'underground underground underground underground underground'; } }
 
-/*# sourceMappingURL=test.css.map */
+/*# sourceMappingURL=style.css.map */
