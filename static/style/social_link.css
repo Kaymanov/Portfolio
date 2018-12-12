@@ -4,8 +4,8 @@
 }
 
 .hover {
-    margin: -12px;
-
+    grid-area: hover;
+    justify-items: center;
     position: relative;
     display: inline-block;
     align-items: center;
